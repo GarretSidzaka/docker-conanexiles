@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 LABEL maintainer="Garret Sidzaka"
 
@@ -22,10 +22,9 @@ RUN apt-get update \
 RUN dpkg --add-architecture i386 \
     && curl https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
     && apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/' \
-    && apt-add-repository ppa:cybermax-dexter/sdl2-backport \
     && apt-get update \
     && apt-get install --install-recommends --assume-yes winehq-devel \
-    && pip3 install python-valve \
+    && pip3 install python-valve --break-system-packages \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
