@@ -65,6 +65,11 @@ If there is a folder with configurations found at `/tmp/docker-conanexiles` this
 
 Use the environment variable `CONANEXILES_SERVER_TYPE=pve` to use the pve template; otherwise the pvp template will be used if no configuration has been provided.
 
+### Host Tweaks
+
+Based on this [reddit thread discussing dedicated server on Linux hangs and players disconnect](https://www.reddit.com/r/ConanExiles/comments/1dbuiqd/dedicated_server_on_linux_hangs_and_players/) that user
+[whereismycow42](https://reddit.com/user/whereismycow42) posted with a solution, it's recommended to update `vm.max_map_count` to greater than the default value of `65536`. We tried to integrate this solution in the startup script to set the value in the docker container, but found that you need to set this at the host level as root. Please review the thread post and apply the appropriate fix so you can include as many mods as you want.
+
 ---
 
 ## Multi Instance Setup
