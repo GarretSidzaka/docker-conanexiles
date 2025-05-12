@@ -681,8 +681,6 @@ services:
       - "TZ=UTC"
     volumes:
       - redis:/data/
-    ports:
-      - 6379:6379
   redis_insight:
     image: redislabs/redisinsight:latest
     container_name: redis_insight
