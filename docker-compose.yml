@@ -1,3 +1,4 @@
+services:
 #master server
   ce0:
     image: garretsidzaka/docker-conanexiles:latest
