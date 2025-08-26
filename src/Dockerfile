@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 LABEL maintainer="GarretSidzaka"
 
-ENV TIMEZONE=UTC \
+ENV TIMEZONE=America/Los_Angeles \
     DEBIAN_FRONTEND=noninteractive \
     CONANEXILES_MASTERSERVER=1 \
     CONANEXILES_Game_RconPlugin_RconEnabled=1 \
