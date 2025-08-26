@@ -6,10 +6,8 @@ source /var/lib/conanexiles/redis_cmds.sh
 if [ -z $CONANEXILES_INSTANCENAME ]
 then
     _config_folder="/conanexiles/ConanSandbox/Saved/Config/WindowsServer"
-    _log_folder="/conanexiles/ConanSandbox/Saved/Logs"
 else
     _config_folder="/conanexiles/ConanSandbox/${CONANEXILES_INSTANCENAME}/Saved/Config/WindowsServer"
-    _log_folder="/conanexiles/ConanSandbox/${CONANEXILES_INSTANCENAME}/Saved/Logs"
 fi
 
 _config_folder_provided="/tmp/docker-conanexiles"
