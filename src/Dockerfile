@@ -57,4 +57,4 @@ EXPOSE 7777/udp 25575 27015/udp 27016/udp 37015/udp 37016/udp 5900
 VOLUME ["/conanexiles"]
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["supervisord"]
+CMD ["supervisord -n"]
