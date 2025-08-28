@@ -20,10 +20,11 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN dpkg --add-architecture i386 \
-    && curl https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
-    && apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/' \
+    && mkdir -pm755 /etc/apt/keyrings \
+    && wget -O - https://dl.winehq.org/wine-builds/winehq.key | gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key - \
+    && wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources \
     && apt-get update \
-    && apt-get install --install-recommends --assume-yes winehq-devel \
+    && apt-get install --install-recommends --assume-yes winehq-stable \
     && pip3 install python-valve --break-system-packages \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -57,4 +58,4 @@ EXPOSE 7777/udp 25575 27015/udp 27016/udp 37015/udp 37016/udp 5900
 VOLUME ["/conanexiles"]
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["supervisord -n"]
+CMD ["supervisord"]
