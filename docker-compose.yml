@@ -40,7 +40,7 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
-      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Welcome to the Expanse, exile.<br>----------------------------------<br>Instance Type:  PVP Raid Hours ~ 10x Boosted<br>Please read the Official Server rules: https://forums.funcom.com/t/112678"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Please read the Official Server rules: https://forums.funcom.com/t/112678"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
       - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
@@ -84,7 +84,6 @@ services:
       # Installed Mods
       #880454836 Pippi Server manager
       #2305969565 amunets server transfer
-
       #2377569193 savage wilds
       - "CONANEXILES_MODS=880454836,2305969565,2377569193"   
       # logging
@@ -316,7 +315,7 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
-      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Welcome to the Expanse, exile.<br>----------------------------------<br>Instance Type:  PVP Raid Hours ~ 10x Boosted<br>Please read the Official Server rules: https://forums.funcom.com/t/112678"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Please read the Official Server rules: https://forums.funcom.com/t/112678"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
       - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
@@ -360,10 +359,8 @@ services:
       # Installed Mods
       #880454836 Pippi Server manager
       #2305969565 amunets server transfer
-
-      - "CONANEXILES_MODS=880454836,2305969565"   
-
-# logging
+      - "CONANEXILES_MODS=880454836,2305969565" 
+      # logging
       - "CONANEXILES_Engine_Core.Log_LogStreaming=Error"
       - "CONANEXILES_Engine_Core.Log_GlobalServerChannel=Error"
       - "CONANEXILES_Engine_Core.Log_ConanBattlePass=Fatal"
@@ -593,7 +590,7 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
-      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Welcome to the Expanse, exile.<br>----------------------------------<br>Instance Type:  PVP Raid Hours ~ 10x Boosted<br>Please read the Official Server rules: https://forums.funcom.com/t/112678"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Please read the Official Server rules: https://forums.funcom.com/t/112678"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
       - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
@@ -637,8 +634,7 @@ services:
       # Installed Mods
       #880454836 Pippi Server manager
       #2305969565 amunets server transfer
-      - "CONANEXILES_MODS=880454836,2305969565"              
-
+      - "CONANEXILES_MODS=880454836,2305969565" 
       # logging
       - "CONANEXILES_Engine_Core.Log_LogStreaming=Error"
       - "CONANEXILES_Engine_Core.Log_GlobalServerChannel=Error"
