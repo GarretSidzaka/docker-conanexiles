@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     environment:
       # server settings
-      - "CONANEXILES_CMDSWITCHES='-Port=7777 -QueryPort=27020'"
+      - "CONANEXILES_CMDSWITCHES='-Port=7777 -QueryPort=27017'"
       - "CONANEXILES_SERVER_TYPE=pvp"
       - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=agoodpassword"
       #custom map
@@ -19,7 +19,7 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=1"
       - "CONANEXILES_MASTERSERVER=1"
       - "CONANEXILES_PORT=7777"
-      - "CONANEXILES_QUERYPORT=27020"
+      - "CONANEXILES_QUERYPORT=27017"
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=MyMasterServerName"
       - "CONANEXILES_INSTANCENAME=MyMasterInstanceName"
       - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
@@ -31,11 +31,62 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_MaxDeathMapMarkers=3"
       - "CONANEXILES_ServerSettings_ServerSettings_DropEquipmentOnDeath=1"
       - "CONANEXILES_ServerSettings_ServerSettings_EverybodyCanLootCorpse=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPRateMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPKillMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPHarvestMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPCraftMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPTimeMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ItemConvertionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Welcome to the Expanse, exile.<br>----------------------------------<br>Instance Type:  PVP Raid Hours ~ 10x Boosted<br>Please read the Official Server rules: https://forums.funcom.com/t/112678"
+      - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
+      - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
+      - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ItemConvertionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_clanMaxSize=10"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_RestrictPVPBuildingDamageTime=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeMondayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeTuesdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeWednesdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeThursdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeFridayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSaturdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSundayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeMondayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeTuesdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeWednesdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeThursdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeFridayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSaturdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSundayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledMonday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledTuesday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledWednesday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledThursday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledFriday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledSaturday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledSunday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_ThrallConversionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_MinionPopulationPerPlayer=15"
+      - "CONANEXILES_ServerSettings_ServerSettings_UseMinionPopulationLimit=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_AnimalPenCraftingTimeMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_BuildingDamageMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_EventLogPvPCauserPrivacy=0"
+      - "CONANEXILES_ServerSettings_ServerSettings_EventLogPvECauserPrivacy=0"
+      - "CONANEXILES_ServerSettings_ServerSettings_AllowFamilySharedAccount=False"
+      - "CONANEXILES_ServerSettings_ServerSettings_HarvestAmountMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ResourceRespawnSpeedMultiplier=10.000000"
       # Installed Mods
       #880454836 Pippi Server manager
-      #1823412793 mod control panel
+      #2305969565 amunets server transfer
+
       #2377569193 savage wilds
-      - "CONANEXILES_MODS=880454836,1823412793,2377569193"   
+      - "CONANEXILES_MODS=880454836,2305969565,2377569193"   
       # logging
       - "CONANEXILES_Engine_Core.Log_LogStreaming=Error"
       - "CONANEXILES_Engine_Core.Log_GlobalServerChannel=Error"
@@ -216,13 +267,13 @@ services:
       - "7777:7777/udp"
       - "7778:7778/tcp"
       - "7778:7778/udp"
-      - "27020:27020/tcp"
-      - "27020:27020/udp"
+      - "27020:27017/tcp"
+      - "27020:27017/udp"
       - "25575:25575/tcp"
       - "25575:25575/udp"
     volumes:
-        - conanexiles:/conanexiles
-        - /etc/localtime:/etc/localtime:ro
+      - conanexiles:/conanexiles
+      - /etc/localtime:/etc/localtime:ro
 
 #first minion server    
   ce1:
@@ -233,7 +284,7 @@ services:
       - ce0
     restart: unless-stopped
     environment:
-      - "CONANEXILES_CMDSWITCHES='-Port=7779 -QueryPort=27017'"
+      - "CONANEXILES_CMDSWITCHES='-Port=7779 -QueryPort=27018'"
       - "CONANEXILES_SERVER_TYPE=pvp"
       - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=agoodpassword"
       #custom map
@@ -244,7 +295,7 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=1"
       - "CONANEXILES_MASTERSERVER=0"
       - "CONANEXILES_PORT=7779"
-      - "CONANEXILES_QUERYPORT=27017"
+      - "CONANEXILES_QUERYPORT=27018"
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=MyFirstMinionServerName"
       - "CONANEXILES_INSTANCENAME=MyFirstMinionInstanceName"
       - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
@@ -256,11 +307,63 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_MaxDeathMapMarkers=3"
       - "CONANEXILES_ServerSettings_ServerSettings_DropEquipmentOnDeath=1"
       - "CONANEXILES_ServerSettings_ServerSettings_EverybodyCanLootCorpse=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPRateMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPKillMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPHarvestMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPCraftMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPTimeMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ItemConvertionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Welcome to the Expanse, exile.<br>----------------------------------<br>Instance Type:  PVP Raid Hours ~ 10x Boosted<br>Please read the Official Server rules: https://forums.funcom.com/t/112678"
+      - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
+      - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
+      - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ItemConvertionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_clanMaxSize=10"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_RestrictPVPBuildingDamageTime=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeMondayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeTuesdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeWednesdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeThursdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeFridayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSaturdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSundayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeMondayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeTuesdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeWednesdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeThursdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeFridayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSaturdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSundayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledMonday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledTuesday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledWednesday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledThursday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledFriday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledSaturday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledSunday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_ThrallConversionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_MinionPopulationPerPlayer=15"
+      - "CONANEXILES_ServerSettings_ServerSettings_UseMinionPopulationLimit=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_AnimalPenCraftingTimeMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_BuildingDamageMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_EventLogPvPCauserPrivacy=0"
+      - "CONANEXILES_ServerSettings_ServerSettings_EventLogPvECauserPrivacy=0"
+      - "CONANEXILES_ServerSettings_ServerSettings_AllowFamilySharedAccount=False"
+      - "CONANEXILES_ServerSettings_ServerSettings_HarvestAmountMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ResourceRespawnSpeedMultiplier=10.000000"
       # Installed Mods
       #880454836 Pippi Server manager
-      #1823412793 mod control panel
-      - "CONANEXILES_MODS=880454836,1823412793"   
-      # logging
+      #2305969565 amunets server transfer
+
+      - "CONANEXILES_MODS=880454836,2305969565"   
+
+# logging
       - "CONANEXILES_Engine_Core.Log_LogStreaming=Error"
       - "CONANEXILES_Engine_Core.Log_GlobalServerChannel=Error"
       - "CONANEXILES_Engine_Core.Log_ConanBattlePass=Fatal"
@@ -440,8 +543,8 @@ services:
       - "7779:7779/udp"
       - "7780:7780/tcp"
       - "7780:7780/udp"
-      - "27017:27017/tcp"
-      - "27017:27017/udp"
+      - "27017:27018/tcp"
+      - "27017:27018/udp"
       - "25576:25576/tcp"
       - "25576:25576/udp"
     volumes:
@@ -458,7 +561,7 @@ services:
       - ce0
     restart: unless-stopped
     environment:
-      - "CONANEXILES_CMDSWITCHES='-Port=7781 -QueryPort=27018'"
+      - "CONANEXILES_CMDSWITCHES='-Port=7781 -QueryPort=27019'"
       - "CONANEXILES_SERVER_TYPE=pvp"
       - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=agoodpassword"
       #custom map
@@ -469,7 +572,7 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=1"
       - "CONANEXILES_MASTERSERVER=0"
       - "CONANEXILES_PORT=7781"
-      - "CONANEXILES_QUERYPORT=27018"
+      - "CONANEXILES_QUERYPORT=27019"
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=MySecondMinionServerName"
       - "CONANEXILES_INSTANCENAME=MySecondMinionInstanceName"
       - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
@@ -481,10 +584,61 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_MaxDeathMapMarkers=3"
       - "CONANEXILES_ServerSettings_ServerSettings_DropEquipmentOnDeath=1"
       - "CONANEXILES_ServerSettings_ServerSettings_EverybodyCanLootCorpse=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPRateMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPKillMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPHarvestMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPCraftMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerXPTimeMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ItemConvertionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Welcome to the Expanse, exile.<br>----------------------------------<br>Instance Type:  PVP Raid Hours ~ 10x Boosted<br>Please read the Official Server rules: https://forums.funcom.com/t/112678"
+      - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
+      - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
+      - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ItemConvertionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_clanMaxSize=10"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_RestrictPVPBuildingDamageTime=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeMondayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeTuesdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeWednesdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeThursdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeFridayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSaturdayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSundayStart=1800"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeMondayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeTuesdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeWednesdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeThursdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeFridayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSaturdayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageTimeSundayEnd=2300"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledMonday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledTuesday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledWednesday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledThursday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledFriday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledSaturday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_PVPBuildingDamageEnabledSunday=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_ThrallConversionMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_MinionPopulationPerPlayer=15"
+      - "CONANEXILES_ServerSettings_ServerSettings_UseMinionPopulationLimit=True"
+      - "CONANEXILES_ServerSettings_ServerSettings_AnimalPenCraftingTimeMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_BuildingDamageMultiplier=0.100000"
+      - "CONANEXILES_ServerSettings_ServerSettings_EventLogPvPCauserPrivacy=0"
+      - "CONANEXILES_ServerSettings_ServerSettings_EventLogPvECauserPrivacy=0"
+      - "CONANEXILES_ServerSettings_ServerSettings_AllowFamilySharedAccount=False"
+      - "CONANEXILES_ServerSettings_ServerSettings_HarvestAmountMultiplier=10.000000"
+      - "CONANEXILES_ServerSettings_ServerSettings_ResourceRespawnSpeedMultiplier=10.000000"
       # Installed Mods
       #880454836 Pippi Server manager
-      #1823412793 mod control panel
-      - "CONANEXILES_MODS=880454836,1823412793"              
+      #2305969565 amunets server transfer
+      - "CONANEXILES_MODS=880454836,2305969565"              
+
       # logging
       - "CONANEXILES_Engine_Core.Log_LogStreaming=Error"
       - "CONANEXILES_Engine_Core.Log_GlobalServerChannel=Error"
@@ -665,8 +819,8 @@ services:
       - "7781:7781/udp"
       - "7782:7782/tcp"
       - "7782:7782/udp"
-      - "27018:27018/tcp"
-      - "27018:27018/udp"
+      - "27018:27019/tcp"
+      - "27018:27019/udp"
       - "25577:25577/tcp"
       - "25577:25577/udp"
     volumes:
@@ -678,17 +832,31 @@ services:
     container_name: redis
     restart: unless-stopped
     environment:
-      - "TZ=UTC"
+      - "TZ=America/Los_Angeles"
     volumes:
       - redis:/data/
+    ports:
+      - 6379:6379
   redis_insight:
     image: redislabs/redisinsight:latest
     container_name: redis_insight
     restart: unless-stopped
     ports:
       - 8001:8001
+    depends_on:
+      - redis
     volumes:
       - insight:/db
+  amunet:
+    image: garretsidzaka/docker-apache-php7
+    container_name: amunet
+    restart: unless-stopped
+    ports:
+      - "7776:80/tcp"
+    volumes:
+      - ./amunet:/var/www:rw
+#need to unzip amunet archive in here.
+#to do add automation for amunet
 
 volumes:
   conanexiles:
