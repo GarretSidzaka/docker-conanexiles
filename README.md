@@ -6,7 +6,7 @@ There are more features on the roadmap, and community feedback, issues, and code
 ---
 
 Source of server tweaks: <https://steamcommunity.com/sharedfiles/filedetails/?id=2130895654>
-Original Author: https://github.com/alinmear/docker-conanexiles
+Original Author: <https://github.com/alinmear/docker-conanexiles>
 
 ---
 
@@ -20,6 +20,7 @@ Original Author: https://github.com/alinmear/docker-conanexiles
 * Running multiple instances with multiple config directories
 * RCON Support (supported but unreliable due to Funcom)
 * Logging support
+* Linux tweak script for admins, including the memory fix
 
 ---
 ### Wishlist/ToDo
@@ -39,10 +40,6 @@ docker-compose pull
 `docker-compose up -d`
 
 
-### Update image and rollout
-
-`docker-compose pull && docker-compose up -d`
-
 ### Shutdown
 
 `docker-compose down`
@@ -51,7 +48,7 @@ docker-compose pull
 
 ## Create a simplified `docker-compose.yml`
 
-The `docker-compose.yml` file can be customized e.g. if you do not want to run several game servers.
+The `docker-compose.yml` file can be customized e.g. if you do not want to run several game servers or custom maps.
 
 ---
 
@@ -67,9 +64,8 @@ Use the environment variable `CONANEXILES_SERVER_TYPE=pve` to use the pve templa
 
 ### Host Tweaks
 
-Based on this [reddit thread discussing dedicated server on Linux hangs and players disconnect](https://www.reddit.com/r/ConanExiles/comments/1dbuiqd/dedicated_server_on_linux_hangs_and_players/) that user
-[whereismycow42](https://reddit.com/user/whereismycow42) posted with a solution, it's recommended to update `vm.max_map_count` to greater than the default value of `65536`. We tried to integrate this solution in the startup script to set the value in the docker container, but found that you need to set this at the host level as root. Please review the thread post and apply the appropriate fix so you can include as many mods as you want.
-
+Included small shell script based on this [reddit thread discussing dedicated server on Linux hangs and players disconnect](https://www.reddit.com/r/ConanExiles/comments/1dbuiqd/dedicated_server_on_linux_hangs_and_players/) that user
+[whereismycow42](https://reddit.com/user/whereismycow42) posted with a solution.   Additionally, there are more tweaks based on this [article on linux optimization](https://www.baeldung.com/linux/optimize-performance-efficiency-speed/).
 ---
 
 ## Multi Instance Setup
@@ -120,14 +116,14 @@ Default: CONANEXILES_INSTANCENAME = saved (the default config folder name)
 
 Mods can be install with the global env variable `CONANEXILES_MODS`. Specify ModIDs as comma separated list there. E.g.
 
-NOTE: Yout can get the modids from Steamworkshop.
+NOTE: You can get the modIDs from Steamworkshop.
 
 After a restart the mods will be downloaded, activated and updated via steamworkshop.
 
 ## Environment Variables and Config Options
 
-A conan exiles dedicated server uses a lot of configuration options to influence nearly every aspect of the game logics.
-To have full control of this complex configuration situation i implemented a logic to set these values in every config files.
+A conan exiles dedicated server uses a lot of configuration options to influence nearly every aspect of the game logic.
+To have full control of this complex configuration situation there was implemented new logic to set these values in every config files.
 
 ConanExiles uses a common ini format. That means that a config file has the following logic:
 
