@@ -67,6 +67,7 @@ Use the environment variable `CONANEXILES_SERVER_TYPE=pve` to use the pve templa
 
 Included small shell script based on this [reddit thread discussing dedicated server on Linux hangs and players disconnect](https://www.reddit.com/r/ConanExiles/comments/1dbuiqd/dedicated_server_on_linux_hangs_and_players/) that user
 [whereismycow42](https://reddit.com/user/whereismycow42) posted with a solution.   Additionally, there are more tweaks based on this [article on linux optimization](https://www.baeldung.com/linux/optimize-performance-efficiency-speed/).
+
 ---
 
 ## Multi Instance Setup
