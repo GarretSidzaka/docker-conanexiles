@@ -820,7 +820,7 @@ services:
     volumes:
       - conanexiles:/conanexiles
       - /etc/localtime:/etc/localtime:ro
-      
+  #MESSAGING DB    
   redis:
     image: redis:5-alpine
     container_name: redis
@@ -831,16 +831,6 @@ services:
       - redis:/data/
     ports:
       - 6379:6379
-  redis_insight:
-    image: redislabs/redisinsight:latest
-    container_name: redis_insight
-    restart: unless-stopped
-    ports:
-      - 5540:5540
-    depends_on:
-      - redis
-    volumes:
-      - insight:/db
   amunet:
     image: garretsidzaka/docker-apache-php7
     container_name: amunet
