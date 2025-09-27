@@ -24,8 +24,10 @@ Original Author: <https://github.com/alinmear/docker-conanexiles>
 * Linux tweak script for admins, including the memory fix
 
 ---
-### Discord integration
-https://github.com/melecajou/conanserverstatus
+### Features in development
+Discord integration https://github.com/melecajou/conanserverstatus
+
+SQLight database administration
 ---
 
 
