@@ -841,23 +841,6 @@ services:
       - ./amunet:/var/www:rw
 #need to unzip amunet archive in here.
 #to do add automation for amunet
-  sqlitebrowser:
-    image: lscr.io/linuxserver/sqlitebrowser:latest
-    container_name: sqlitebrowser
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Los_Angeles
-      - TITLE=sqlite_browser
-      - PASSWORD=agoodpassword
-    volumes:
-      - /path/to/config:/config
-      - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - 3000:3000
-      - 3001:3001
-    shm_size: "1gb"
-    restart: unless-stopped
 volumes:
   conanexiles:
   redis:
