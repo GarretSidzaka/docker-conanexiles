@@ -27,7 +27,7 @@ Original Author: <https://github.com/alinmear/docker-conanexiles>
 ### Features in development
 Discord integration https://github.com/melecajou/conanserverstatus
 
-SQLight database administration
+SQLight database administration https://github.com/fluidblue/adminer-sqlite
 
 ---
 
