@@ -29,6 +29,9 @@ Discord integration https://github.com/melecajou/conanserverstatus
 
 SQLight database administration https://github.com/fluidblue/adminer-sqlite
 
+https://nodecraft.com/support/games/conan-exiles/decoding-the-game-db
+
+
 ---
 
 
