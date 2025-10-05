@@ -10,21 +10,22 @@ services:
       # server settings
       - "CONANEXILES_CMDSWITCHES='-Port=7777 -QueryPort=27017'"
       - "CONANEXILES_SERVER_TYPE=pvp"
-      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=agoodpassword"
-      #custom map
-      - "CONANEXILES_Engine_/Script/EngineSettings.GameMapsSettings_ServerDefaultMap=/Game/Mods/Savage_Wilds/Savage_Wilds"
-      #comment above line out to remove custom map
-      - "CONANEXILES_ServerSettings_ServerSettings_IsVACEnabled=True"
-      - "CONANEXILES_ServerSettings_ServerSettings_IsBattlEyeEnabled=True"
-      - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=1"
       - "CONANEXILES_MASTERSERVER=1"
       - "CONANEXILES_PORT=7777"
       - "CONANEXILES_QUERYPORT=27017"
-      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=MyMasterServerName"
-      - "CONANEXILES_INSTANCENAME=MyMasterInstanceName"
-      - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
-      - "CONANEXILES_Game_RconPlugin_RconPassword=agoodpassword"
       - "CONANEXILES_Game_RconPlugin_RconPort=25575"
+      # Custom map, comment out below line for default map
+      - "CONANEXILES_Engine_/Script/EngineSettings.GameMapsSettings_ServerDefaultMap=/Game/Mods/Savage_Wilds/Savage_Wilds"
+      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=${ADMINPASSWORD}"
+      - "CONANEXILES_ServerSettings_ServerSettings_IsVACEnabled=${VACENABLED}"
+      - "CONANEXILES_ServerSettings_ServerSettings_IsBattlEyeEnabled=${BATTLEYEENABLED}"
+      - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=${SERVERREGION}"
+      - "CONANEXILES_Game_RconPlugin_RconEnabled=${RCONENABLED}"
+      - "CONANEXILES_Game_RconPlugin_RconPassword=${RCONPASSWORD}"
+      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=${CE0_SERVERNAME}"
+      - "CONANEXILES_INSTANCENAME=${CE0_INSTANCENAME}"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=${CE0_MOTD}" 
+      # Conan server settings 
       - "CONANEXILES_Game_RconPlugin_RconMaxKarma=60"
       - "CONANEXILES_UPDATE_SHUTDOWN_TIMER=15"
       - "CONANEXILES_ServerSettings_ServerSettings_CorpsesPerPlayer=3"
@@ -40,7 +41,6 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
-      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Please read the Official Server rules: forums.funcom.com/t/112678"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
       - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
@@ -80,7 +80,7 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_AllowFamilySharedAccount=False"
       - "CONANEXILES_ServerSettings_ServerSettings_HarvestAmountMultiplier=10.000000"
       - "CONANEXILES_ServerSettings_ServerSettings_ResourceRespawnSpeedMultiplier=10.000000"
-      # Installed Mods
+      # Installed Mods (Savage Wilds)
       #880454836 Pippi Server manager
       #2305969565 amunets server transfer
       #2377569193 savage wilds
@@ -94,7 +94,7 @@ services:
       - "CONANEXILES_Engine_Core.Log_Network=Error"
       - "CONANEXILES_Engine_Core.Log_LogNetPackageMap=Error"
       - "CONANEXILES_Engine_Core.Log_LogModController=Error"
-      # Very Good Defaults
+      # Client Optimizations: Very Good Defaults
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=30" #INSERT A VALUE OF 30 OR HIGHER
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxClientRate=100000"
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxInternetClientRate=100000"
@@ -284,21 +284,22 @@ services:
     environment:
       - "CONANEXILES_CMDSWITCHES='-Port=7779 -QueryPort=27018'"
       - "CONANEXILES_SERVER_TYPE=pvp"
-      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=agoodpassword"
-      #custom map
-      - "CONANEXILES_Engine_/Script/EngineSettings.GameMapsSettings_ServerDefaultMap=/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah"
-      #comment above line out to remove custom map
-      - "CONANEXILES_ServerSettings_ServerSettings_IsVACEnabled=True"
-      - "CONANEXILES_ServerSettings_ServerSettings_IsBattlEyeEnabled=True"
-      - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=1"
       - "CONANEXILES_MASTERSERVER=0"
       - "CONANEXILES_PORT=7779"
       - "CONANEXILES_QUERYPORT=27018"
-      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=MyFirstMinionServerName"
-      - "CONANEXILES_INSTANCENAME=MyFirstMinionInstanceName"
-      - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
-      - "CONANEXILES_Game_RconPlugin_RconPassword=agoodpassword"
       - "CONANEXILES_Game_RconPlugin_RconPort=25576"
+      # Custom map, comment out below line for default map
+      - "CONANEXILES_Engine_/Script/EngineSettings.GameMapsSettings_ServerDefaultMap=/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah"
+      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=${ADMINPASSWORD}"
+      - "CONANEXILES_ServerSettings_ServerSettings_IsVACEnabled=${VACENABLED}"
+      - "CONANEXILES_ServerSettings_ServerSettings_IsBattlEyeEnabled=${BATTLEYEENABLED}"
+      - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=${SERVERREGION}"
+      - "CONANEXILES_Game_RconPlugin_RconEnabled=${RCONENABLED}"
+      - "CONANEXILES_Game_RconPlugin_RconPassword=${RCONPASSWORD}"
+      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=${CE1_SERVERNAME}"
+      - "CONANEXILES_INSTANCENAME=${CE1_INSTANCENAME}"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=${CE1_MOTD}" 
+      # Conan server settings 
       - "CONANEXILES_Game_RconPlugin_RconMaxKarma=60"
       - "CONANEXILES_UPDATE_SHUTDOWN_TIMER=15"
       - "CONANEXILES_ServerSettings_ServerSettings_CorpsesPerPlayer=3"
@@ -314,7 +315,6 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
-      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Please read the Official Server rules: forums.funcom.com/t/112678"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
       - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
@@ -367,7 +367,7 @@ services:
       - "CONANEXILES_Engine_Core.Log_Network=Error"
       - "CONANEXILES_Engine_Core.Log_LogNetPackageMap=Error"
       - "CONANEXILES_Engine_Core.Log_LogModController=Error"
-      # Very Good Defaults
+      # Client Optimizations: Very Good Defaults
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=30" #INSERT A VALUE OF 30 OR HIGHER
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxClientRate=100000"
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxInternetClientRate=100000"
@@ -408,7 +408,7 @@ services:
       - "CONANEXILES_Engine_/script/conansandbox.systemsettings_dw.NpcLOD3ControllerTickRate=20.f"
       - "CONANEXILES_Engine_/script/conansandbox.systemsettings_dw.NpcLOD3BehaviorTickRate=20.f"
       - "CONANEXILES_Engine_/script/conansandbox.systemsettings_dw.NpcLOD2MovementTickRate=2.0f"
-  # disabled for siptah compatibility
+      # the following graphical changes are disabled for siptah compatibility
       #- "CONANEXILES_Engine_/script/conansandbox.systemsettings_dw.NpcLOD3MovementTickRate=20.f"
       #- "CONANEXILES_Scalability_AntiAliasingQuality@0_r.MSAA.CompositingSampleCount=0"
       #- "CONANEXILES_Scalability_AntiAliasingQuality@1_r.MSAA.CompositingSampleCount=2"
@@ -559,21 +559,22 @@ services:
     environment:
       - "CONANEXILES_CMDSWITCHES='-Port=7781 -QueryPort=27019'"
       - "CONANEXILES_SERVER_TYPE=pvp"
-      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=agoodpassword"
-      #custom map
-      #- "CONANEXILES_Engine_/Script/EngineSettings.GameMapsSettings_ServerDefaultMap=/Game/Mods/Savage_Wilds/Savage_Wilds"
-      #comment above line out to remove custom map
-      - "CONANEXILES_ServerSettings_ServerSettings_IsVACEnabled=True"
-      - "CONANEXILES_ServerSettings_ServerSettings_IsBattlEyeEnabled=True"
-      - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=1"
       - "CONANEXILES_MASTERSERVER=0"
       - "CONANEXILES_PORT=7781"
       - "CONANEXILES_QUERYPORT=27019"
-      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=MySecondMinionServerName"
-      - "CONANEXILES_INSTANCENAME=MySecondMinionInstanceName"
-      - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
-      - "CONANEXILES_Game_RconPlugin_RconPassword=agoodpassword"
       - "CONANEXILES_Game_RconPlugin_RconPort=25577"
+      # Custom map, comment out below line for default map
+      #- "CONANEXILES_Engine_/Script/EngineSettings.GameMapsSettings_ServerDefaultMap="
+      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=${ADMINPASSWORD}"
+      - "CONANEXILES_ServerSettings_ServerSettings_IsVACEnabled=${VACENABLED}"
+      - "CONANEXILES_ServerSettings_ServerSettings_IsBattlEyeEnabled=${BATTLEYEENABLED}"
+      - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=${SERVERREGION}"
+      - "CONANEXILES_Game_RconPlugin_RconEnabled=${RCONENABLED}"
+      - "CONANEXILES_Game_RconPlugin_RconPassword=${RCONPASSWORD}"
+      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=${CE2_SERVERNAME}"
+      - "CONANEXILES_INSTANCENAME=${CE2_INSTANCENAME}"
+      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=${CE2_MOTD}" 
+      # Conan server settings 
       - "CONANEXILES_Game_RconPlugin_RconMaxKarma=60"
       - "CONANEXILES_UPDATE_SHUTDOWN_TIMER=15"
       - "CONANEXILES_ServerSettings_ServerSettings_CorpsesPerPlayer=3"
@@ -589,7 +590,6 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleThirstMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_PlayerIdleHungerMultiplier=0.100000"
       - "CONANEXILES_ServerSettings_ServerSettings_DurabilityMultiplier=2.000000"
-      - "CONANEXILES_ServerSettings_ServerSettings_ServerMessageOfTheDay=Please read the Official Server rules: forums.funcom.com/t/112678"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKPercentage=90"
       - "CONANEXILES_ServerSettings_ServerSettings_KickAFKTime=2700"
       - "CONANEXILES_ServerSettings_ServerSettings_LandClaimRadiusMultiplier=0.250000"
@@ -629,10 +629,11 @@ services:
       - "CONANEXILES_ServerSettings_ServerSettings_AllowFamilySharedAccount=False"
       - "CONANEXILES_ServerSettings_ServerSettings_HarvestAmountMultiplier=10.000000"
       - "CONANEXILES_ServerSettings_ServerSettings_ResourceRespawnSpeedMultiplier=10.000000"
-      # Installed Mods
+      # Installed Mods (Exiled Lands) 
       #880454836 Pippi Server manager
       #2305969565 amunets server transfer
-      - "CONANEXILES_MODS=880454836,2305969565" 
+      - "CONANEXILES_MODS=880454836,2305969565,1113901982" 
+      #1113901982 AOC
       # logging
       - "CONANEXILES_Engine_Core.Log_LogStreaming=Error"
       - "CONANEXILES_Engine_Core.Log_GlobalServerChannel=Error"
@@ -642,7 +643,7 @@ services:
       - "CONANEXILES_Engine_Core.Log_Network=Error"
       - "CONANEXILES_Engine_Core.Log_LogNetPackageMap=Error"
       - "CONANEXILES_Engine_Core.Log_LogModController=Error"
-      # Very Good Defaults
+      # Client Optimizations: Very Good Defaults
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=30" #INSERT A VALUE OF 30 OR HIGHER
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxClientRate=100000"
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxInternetClientRate=100000"
@@ -820,17 +821,39 @@ services:
     volumes:
       - conanexiles:/conanexiles
       - /etc/localtime:/etc/localtime:ro
-  #MESSAGING DB    
+      
+  #SupervisorD state management Database, not used for game data
   redis:
     image: redis:5-alpine
     container_name: redis
     restart: unless-stopped
     environment:
-      - "TZ=America/Los_Angeles"
+      - "TZ=${TZ}"
     volumes:
       - redis:/data/
     ports:
       - 6379:6379
+    
+  #Database Analysis
+  #Adminer: Use Sqlite3.  The password is "admin", user is blank.
+  #You must select one of the game databases.  See example below.
+  #/conanexiles/ConanSandbox/InstanceName/Saved/game.db
+  adminer:
+    image: adminer:4.8.1-standalone
+    container_name: adminer
+    restart: unless-stopped
+    environment:
+      - "TZ=${TZ}"
+      - "ADMINER_PLUGINS=frames tables-filter tinymce"
+      - "ADMINER_DESIGN=dracula"
+    ports:
+      - "7775:8080/tcp"      
+    volumes:
+      - conanexiles:/conanexiles:rw
+      - /etc/localtime:/etc/localtime:ro
+      - ./sqlite.php:/var/www/html/plugins-enabled/sqlite.php
+
+  #Amunet server transfer
   amunet:
     image: garretsidzaka/docker-apache-php7
     container_name: amunet
@@ -838,10 +861,11 @@ services:
     ports:
       - "7776:80/tcp"
     volumes:
+  # You must manually install amunet's server transfer in the ./amunet directory.   TODO:  Automate amunet
       - ./amunet:/var/www:rw
-#need to unzip amunet archive in here.
-#to do add automation for amunet
+      - /etc/localtime:/etc/localtime:ro
+
+
 volumes:
   conanexiles:
   redis:
-  insight:
