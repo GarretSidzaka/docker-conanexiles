@@ -16,10 +16,12 @@ Original Author: https://github.com/alinmear/docker-conanexiles
 * Mod Support
 * Autoupdate of the Conan Exiles server
 * Full control of every config aspect via Environment variables
+* Built-in Database analysis and modification with Adminer-sqlite3
 * Templates for first time setup
 * Running multiple instances with multiple config directories
 * RCON Support (supported but unreliable due to Funcom)
 * Logging support
+  
 
 ---
 ### Wishlist/ToDo
