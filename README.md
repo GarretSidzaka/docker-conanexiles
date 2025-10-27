@@ -6,6 +6,7 @@ There are more features on the roadmap, and community feedback, issues, and code
 ---
 
 Source of server tweaks: <https://steamcommunity.com/sharedfiles/filedetails/?id=2130895654>
+
 Original Author: https://github.com/alinmear/docker-conanexiles
 
 ---
@@ -25,7 +26,7 @@ Original Author: https://github.com/alinmear/docker-conanexiles
 
 ---
 ### Wishlist/ToDo
-* Discord integration
+* Discord integration  https://github.com/GarretSidzaka/docker-conanserverstatus/tree/master
 ---
 
 
