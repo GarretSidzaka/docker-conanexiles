@@ -216,7 +216,7 @@ install_mods() {
     [ -d $_dir ] || mkdir -p $_dir
 
     # Clean modlist to not have multiple entries
-    echo > $MODS_MODLIST_FILE
+    : > $MODS_MODLIST_FILE
 
     IFS=$'\n'
 
