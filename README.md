@@ -195,3 +195,21 @@ command=wine64 /conanexiles/ConanSandbox/Binaries/Win64/ConanSandboxServer-Win64
 
 * `CONANEXILES_UPDATE_SHUTDOWN_TIMER`
 With this variable you can set the amount of time in minutes, the server waits to shutdown for an update.
+
+---
+
+## Adminer Container
+
+Adminer container provides detailed analysis on the in-game databases.
+
+  ### Adminer Connection settings 
+  Use Sqlite3.  The password is `admin`, user is left blank.
+  Select one of the game databases, the complete list is below.
+  
+  * /conanexiles/ConanSandbox/InstanceName/Saved/game.db
+  * /conanexiles/ConanSandbox/InstanceName/Saved/savagewilds_game.db
+  * /conanexiles/ConanSandbox/InstanceName/Saved/dlc_siptah.db
+
+
+NOTE: Yout can get the modids from Steamworkshop.
+
