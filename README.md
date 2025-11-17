@@ -211,5 +211,5 @@ Adminer container provides detailed analysis on the in-game databases.
   * /conanexiles/ConanSandbox/InstanceName/Saved/dlc_siptah.db
 
 
-NOTE: Yout can get the modids from Steamworkshop.
+  Adminer documnetation: https://www.adminer.org/en/
 
