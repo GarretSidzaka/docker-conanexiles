@@ -1,4 +1,6 @@
-# docker-conanexiles
+# End of the road.  Its been good.  This project is now deprecated with the release of Conan Exiles Enhanced native linux support.  Stay tuned for more conan related releases in the future.
+
+## docker-conanexiles
 
 This image was forked from the Alinmear's excellent docker image.  The underlying stack has been updated to 2024 versions, and there are various tweaks and fixes added, as well as additional in-line documentation
 There are more features on the roadmap, and community feedback, issues, and code pushes are welcome.
